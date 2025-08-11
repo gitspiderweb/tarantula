@@ -19,8 +19,8 @@ export default function About() {
                     where every detail matters for both performance and aesthetics.
                 </p>
                 <p className="mb-4">
-                    Currently, I'm a Software Developer at Acret-Philippines Inc.,
-                    where I focus on transforming design documents into dynamic,
+                    Currently, I'm a Software Developer at <a className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300" href="https://acret-ph.com/" target="_blank" rel="noreferrer noopener">Acret-Philippines Inc.</a>
+                    , where I focus on transforming design documents into dynamic,
                     client-focused websites. I specialize in Drupal CMS—managing
                     data, implementing new features, handling robust site traffic,
                     and extending site functionality with custom PHP modules to meet
@@ -30,8 +30,8 @@ export default function About() {
                     My background spans a range of creative and technical roles, from
                     designing print-ready templates and e-commerce solutions for
                     stationery products to developing enterprise web applications.
-                    Previously, as a Product Setup Engineer at Northern Lights
-                    Technology Development, I leveraged my expertise in Adobe
+                    Previously, as a Product Setup Engineer at <a className="font-medium text-slate-200 hover:text-teal-300 focus-visible:text-teal-300" href="https://nltd.com/" target="_blank" rel="noreferrer noopener">Northern Lights
+                        Technology Development</a>, I leveraged my expertise in Adobe
                     InDesign, Illustrator, and Photoshop to create high-quality
                     business collateral.
                 </p>

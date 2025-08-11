@@ -1,6 +1,6 @@
 export default function SpiderButton() {
     return (
-        <div className="absolute bottom-0 right-0">
+        <div className="fixed bottom-8 right-8 z-50">
             <button
                 className="hover:text-teal-300 inline-flex items-center px-2 py-4 font-medium text-slate-400 hover:-translate-y-2 focus-visible:text-teal-300"
                 type="button"

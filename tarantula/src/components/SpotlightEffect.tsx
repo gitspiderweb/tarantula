@@ -7,7 +7,7 @@ export default function SpotlightEffect() {
 
     useEffect(() => {
         const handleMouseMove = (event: MouseEvent) => {
-            setMousePosition({ x: event.clientX, y: event.clientY });
+            setMousePosition({ x: event.pageX, y: event.pageY });
         };
 
         window.addEventListener('mousemove', handleMouseMove);
@@ -16,9 +16,15 @@ export default function SpotlightEffect() {
 
     return (
         <div
-            className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute"
+            className="pointer-events-none absolute inset-0 z-30 transition duration-300"
             style={{
-                background: `radial-gradient(600px at ${mousePosition.x}px ${mousePosition.y}px, rgba(29, 78, 216, 0.15), transparent 80%)`
+                background: `radial-gradient(600px at ${mousePosition.x}px ${mousePosition.y}px, rgba(29, 78, 216, 0.15), transparent 80%)`,
+                height: '100%',
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0
             }}
         />
     );
