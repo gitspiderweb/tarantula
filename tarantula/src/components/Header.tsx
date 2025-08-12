@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
-import Navigation from './Navigation';
+import Link from 'next/link';
 
 export default function Header() {
     const [activeSection, setActiveSection] = useState('about');
@@ -12,7 +12,6 @@ export default function Header() {
                 document.getElementById(section)
             );
 
-            // Check if user is at the bottom or in certificate section
             const isAtBottom =
                 window.innerHeight + window.scrollY >= document.body.offsetHeight - 2;
 
@@ -33,7 +32,7 @@ export default function Header() {
         };
 
         window.addEventListener('scroll', handleScroll);
-        handleScroll(); // Check initial position
+        handleScroll();
 
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -42,7 +41,9 @@ export default function Header() {
         <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-[48%] lg:flex-col lg:justify-between lg:py-24">
             <div>
                 <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
-                    <a href="/">Mark Jay Cabatuan</a>
+                    <Link href="/">
+                        <a>Mark Jay Cabatuan</a>
+                    </Link>
                 </h1>
                 <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
                     Web Developer
@@ -144,3 +145,4 @@ export default function Header() {
         </header>
     );
 }
+

@@ -7,17 +7,3 @@ export default function Footer() {
         </footer>
     );
 }
-
-function FooterLink({ href, text }: { href: string; text: string }) {
-    return (
-        <a
-            href={href}
-            className="font-medium text-slate-400 hover:text-teal-300 focus-visible:text-teal-300"
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label={`${text} (opens in a new tab)`}
-        >
-            {text}
-        </a>
-    );
-}
