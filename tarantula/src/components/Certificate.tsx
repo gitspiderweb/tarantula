@@ -1,6 +1,7 @@
-import Image from 'next/image';
+'use client';
 
 const Certificate = () => {
+    const basePath = process.env.NODE_ENV === 'production' ? '/tarantula' : '';
     const certificates = [
         {
             year: "2025",
@@ -27,8 +28,8 @@ const Certificate = () => {
                         <li key={index} className="mb-12">
                             <div className="group relative grid grid-cols-8 gap-4 transition-all sm:items-center sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
                                 <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg"></div>
-                                <Image
-                                    src={cert.image}
+                                <img
+                                    src={`${basePath}${cert.image}`}
                                     alt="Udemy Logo"
                                     width={200}
                                     height={48}

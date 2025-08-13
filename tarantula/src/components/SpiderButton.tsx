@@ -1,6 +1,7 @@
-import Image from 'next/image';
+'use client';
 
 export default function SpiderButton() {
+    const basePath = process.env.NODE_ENV === 'production' ? '/tarantula' : '';
     return (
         <div className="fixed bottom-8 right-8 z-50">
             <button
@@ -12,12 +13,12 @@ export default function SpiderButton() {
                 data-state="closed"
             >
                 <span className="sr-only">Click to time travel</span>
-                <Image
+                <img
                     alt="Creepy Spider Animation"
                     loading="lazy"
                     width={100}
                     height={86}
-                    src="/creepy_spider.gif"
+                    src={`${basePath}/creepy_spider.gif`}
                 />
             </button>
         </div>
